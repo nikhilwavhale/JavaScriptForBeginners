@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create element is used to create html tags dynamically -->
+
+    <button onclick="sample()" >click</button>
+
+    <script>
+        function sample()
+
+        {
+            // append()
+            // prepend()
+            // after()
+            // before()
+
+            var para_tag=document.createElement("p")
+            document.body.prepend(para_tag)
+            para_tag.innerHTML="paragraph1"
+            para_tag.setAttribute("class","imparagraph")
+            para_tag.setAttribute("id","para")
+            para_tag.setAttribute("title","paragraph tag")
+
+        }
+        
+    </script>
+    <!-- before
+    <div>
+        --------prepend------
+        // content
+        -------apend---------
+    </div>
+    after -->
+    
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* min-height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin-top: 2vh;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 1.5rem;
+            font-size: 2.5em;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2d3436;
+            font-weight: 500;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            /* transition: border-color 0.3s ease; */
+        }
+
+        /* input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4ecdc4;
+            box-shadow: 0 0 5px rgba(78, 205, 196, 0.3); 
+        } */
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: #0c0c0c;
+            color: rgb(240, 235, 235);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #2d2d2de8;
+        }
+        .bordersize
+        {
+            border: 3px;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form class="form" action="#" method="POST" onsubmit="return FormValidation()">
+            <!-- Text Input -->
+            <div class="form-group" >
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="FullName" name="fullname" 
+                       placeholder="Enter your full name" >
+            </div>
+
+            <!-- Email Input -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" 
+                       placeholder="Enter your email" pattern="[a-z,A-Z,0-9,@]">
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" 
+                       placeholder="Create a password" >
+            </div>
+
+            <!-- Telephone Input -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" 
+                       placeholder="Enter your phone number" 
+                       pattern="[0-9]{10}" title="10-digit phone number">
+            </div>
+
+            <!-- Dropdown Select -->
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="0">Select Country</option>
+                    <option value="1">United States</option>
+                    <option value="2">United Kingdom</option>
+                    <option value="3">India</option>
+                    <option value="4">Canada</option>
+                </select>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" id="gen1">
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" id="gen2">
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <!-- Date Input -->
+            <div class="form-group">
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" id="birthdate" name="birthdate" 
+                       max="25-12-31" >
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" 
+                          placeholder="Tell us about yourself"></textarea>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" checked>
+                        I agree to the terms and conditions
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+        <script>
+            
+            function FormValidation()
+            {
+                var name=document.getElementById("FullName").value
+                var input_email=document.getElementById("email").value
+                var pass=document.getElementById("password").value
+                var mob_digit=document.getElementById("phone").value
+                var sel_cntry=document.getElementById("country").value
+                var DOB=document.getElementById("birthdate").value
+                var bio_text=document.getElementById("bio").value
+                var vgen1=document.getElementById("gen1")
+                var vgen2=document.getElementById("gen2")   
+                var all=document.getElementById("FullName" , "email" ,"password","phone" , "country",
+                    "birthdate" , "bio" ,"gen1" , "gen2"
+                )
+            if(all=='')
+            {
+                document.getElementById("FullName","email").style.borderColor="red"
+                return false;
+            }
+              
+                if(name=='')
+                {
+                    document.getElementById("FullName").style.border="2px solid Red";
+                    return false;
+                }
+                if(input_email=='')
+                {
+                    document.getElementById("email").style.border="2px solid Red";;
+                    // document.getElementById("email")="red"
+                    return false;
+                }
+                if(pass=='')
+                {
+                    document.getElementById("password").style.border="2px solid Red";;
+                    return false;
+                    
+                }
+                if(pass.length<4 || pass.length>8)
+                {
+                    document.getElementById("password").style.border="2px solid Red";;
+                    return false;
+                }
+                if(mob_digit=='')
+                {
+                    document.getElementById("phone").style.border="2px solid Red";;
+                    return false;
+                }
+
+            //     if((vgen1.checked==false) && (vgen2.checked==false))
+            // {
+            //     document.getElementById("gen1").style.color="red"
+            //     document.getElementById("gen2").style.color="red"
+            //     return false  
+            // }
+                if(sel_cntry=="0")
+                {
+                    document.getElementById("country").style.border="2px solid Red";;
+                    return false;
+                }
+                if(DOB=='')
+                {
+                    document.getElementById("birthdate").style.border="2px solid Red";;
+                    return false;
+                }
+                if(bio_text=='' && bio_text.length>100 && bio_text.length<10)
+                {
+                    document.getElementById("bio").style.border="2px solid Red";;
+                    return false;
+                }
+           
+            
+            }
+        </script>
+    </div>
+</body>
+</html>

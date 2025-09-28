@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-string</title>
+</head>
+<body>
+    <!-- String :- it is a collection of alphabate , numerics and special symbols 
+    string we can define in single coat and double coat  -->
+    <script>
+        var str1="This is String"
+        document.write(str1+"<br>")
+        document.write(typeof str1+"<br><br>")
+
+
+        // length of string
+
+        var len_str1=str1.length
+        document.write(len_str1+"<br><br><br>")   // length start from 1 
+
+
+        // to ger the specific ccharacter from the string 
+        document.write(str1[0]+"<br>")
+
+
+        var str2=" Nikhil Wavhale "
+        document.write(str2+"<br>")
+        document.write(str2.length+"<br>")
+        document.write(typeof str2+"<br>")
+
+        var new_str2=str2.trim()    // trim() :- This function is used to trip unwanted space in string ffrom satring and ending space 
+        document.write(new_str2.length-1+"<br>")
+
+        for (var x=0;x<=str1;x++)
+    {
+        document.write(str1[x]+"<br><br>")
+    }
+
+    // object method 
+
+    var str3=new String("This is the string")
+    document.write(str3+"<br>")
+
+    document.write(typeof str3+"<br><br>")
+    </script>
+
+</body>
+</html>

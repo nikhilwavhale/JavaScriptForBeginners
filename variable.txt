@@ -1,0 +1,35 @@
+variables 
+------------
+
+--it is use to store a single value at a time .....
+--these values can be int , float , string, boolean,array or object
+--js is a loosely type prog . lan so no need to define datatype  at the time of variables declariction 
+
+
+var varname=valued
+
+d.w(varname)
+
+
+naming rules for variable 
+-------------------------------
+
+
+- always starts with alphabates 
+            number1----valid
+            1number----invalid
+
+
+- white space is not allowed 
+        number  1 -- invalid
+        number_1---valid
+
+- variable names are case-sensitive
+        number1=10
+        d.w(number1)-------invalid
+        d.w(number1)-------valid
+
+-never  use pre-defined keywords for variable name
+
+        write, if , else , document.......
+        

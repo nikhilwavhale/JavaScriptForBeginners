@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body ,h1{
+            margin: 0px;
+            padding: 0px 5px;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+       
+        header {
+            color: blue;
+            text-align: center;
+            font-size: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .maincontainer
+        {
+            width: 33%;
+            margin: 0px 33%;
+            padding:10px 0px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            box-shadow:1px 1px 3px;;
+
+        }
+          
+        .title{
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+            font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;;
+        }
+        .note
+        {
+            color: lightslategray;
+            text-align: center;
+            font-family: SFProText-Regular, Helvetica, Arial, sans-serif;;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgb(176, 175, 175);
+        }
+       
+        .userinput
+      {
+        margin-top: 8px;
+        display: flex;
+      }
+       .Name{
+            width: 100%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            border:  1px solid #ccd0d5 ;  
+            font-family:  SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            border-radius: 3px;
+            font-size: 15px; 
+       }
+       .Nwidth
+       {
+        margin: 0px 1%;
+       }
+       .birthdate
+       {
+        box-sizing: border-box;
+       }
+        .datesection
+        {
+            margin: 5px 0px;
+            display: inline;
+            box-sizing: border-box;
+        }
+        label
+        {
+            font-size: 14px;
+            color: #606770;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;;
+        }
+        select{
+            width: 31.6%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+            border:  1px solid #ccd0d5 ;             
+            border-radius: 3px;
+            color: rgb(21, 20, 20);
+            
+
+        }
+        .gbox
+        {
+            width: 100%;
+            display: flex;
+            word-wrap: break-word;
+
+        }
+        .borderofgender
+        {
+            width: 33.33%;
+            border: 1px solid gray;
+            font-family: SFProText-Medium, Helvetica, Arial, sans-serif;;
+            padding: 0.5rem;
+            display: inline;
+            box-sizing: border-box;
+            border:  1px solid #ccd0d5 ;          
+            border-radius: 3px;
+        }
+        .radioalign
+        {
+            float: right ;  
+            margin: 2px;
+        }
+       .marginleft
+       {
+        margin-left: 5px;
+       }
+       .mobilenumber
+       {
+        margin: 13px 0px;
+       }
+       .mob{
+        width:100%;
+        padding: 0.6rem;
+        box-sizing: border-box;
+        font-size: 15px;
+        border:  1px solid #ccd0d5 ;           
+        border-radius: 3px;
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+       }
+
+       .password
+       {
+        margin: 13px 0px;
+       }
+       .pass{
+        width: 100%;
+        padding: 0.6rem;
+        box-sizing: border-box;
+        font-size: 15px;
+        border:  1px solid #ccd0d5 ;           
+        border-radius: 3px;
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+       }
+
+       .inst
+       {
+        width: 100%;
+        margin: 5px 0px;
+        font-size: 12px;
+        color: lightslategrey;
+       }
+     
+      .btn{
+        margin: 20px 0px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .signup
+      {
+        width: 35%;
+        color: whitesmoke;
+        font-weight: bold;
+        background-color: #00a400;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+      .backtologinpage{
+        text-align: center;
+        margin-bottom: 9px;
+        font-size: 15px;
+      }
+      .haveac{
+        color: #1877f2 ;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      .inputform{
+        padding: 5px 20px;
+      }
+    </style>
+
+</head>
+<body>
+    
+    <header id="Heading">
+        <h1>facebook</h1>
+    </header>
+    <div class="maincontainer">
+    
+       <div class="title">
+        Create a new account
+       </div>
+       <div class="note">
+            It's quick and easy.
+       </div>
+
+       <!-- Form content :- input types -->
+        <form action="#" method="post" id="form" name="facebookrejisterform" class="inputform" onsubmit="return formvalidation()">
+       <div clas="insertcontainer">
+        <div class="userinput">
+        <input class="Name" id="firstname" type="text" placeholder="First name" >
+        <input class="Name Nwidth" id="lastname" type="text" placeholder="Surname" >
+        </div>
+       
+        <!-- date of birth  -->
+        <div class="datesection">
+            <label for="DOB">Date of birth?</label>
+        <div class="birthdate">
+        <!-- date -->
+        <select name="" id="bdate" class="date">
+            <option value=""></option>
+        </select>
+        <!-- month -->
+        <select name="" id="bmonth" class="date">
+            <option value=""></option>
+        </select>
+        <!-- year -->
+        <select name="" id="byear" class="date">
+            <option value=""></option>
+        </select>
+        </div>
+        </div>
+       </div>
+        <div class="gen">
+            <label for="gender">Gender</label>
+            <div class="gbox">
+               <div class="borderofgender" id="gen1div"><Span id="span1">Female</Span><input id="gen1" type="radio" class="radioalign"></div>
+               <div class="borderofgender marginleft" id="gen2div"><Span id="span2">male</Span><input id="gen2" type="radio" class="radioalign"></div>
+               <div class="borderofgender marginleft">Custom<input type="radio" class="radioalign"></div>
+            </div>
+        
+            <!-- mobile number  -->
+
+            <div class="mobilenumber" id="mobilenumberoremail">
+                <input type="text" placeholder="Mobile number or email address" id="inputmob" class="mob">
+            </div>
+
+            <!-- password -->
+             <div class="password" id="password">
+                <input type="password" name="" id="inpass" placeholder="New passowrd" class="pass">
+             </div>
+
+             <!-- instruction -->
+              <div class="inst">People who use our service may have uploaded your contact information to <a href="#">Learn more.</a> </div>
+              <div class="inst">By clicking Sign Up, you agree to our <a href="#"> Terms, Privacy Policy</a> and<a href="#"> Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</div>
+
+              <div class="btn"><input type="submit" class="signup" value="SignUp"></div>
+              <div class="backtologinpage"><a href="#" class="haveac">Already have an account?</a></div>
+             </div>
+       </div>
+        </form>
+    </div>  
+    <script src="FormValidation.js"></script>
+</body>
+</html>

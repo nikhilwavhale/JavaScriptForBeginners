@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Date Options</title>
+</head>
+<body>
+    <select id="day"></select>
+    <select id="month"></select>
+    <select id="year"></select>
+
+    <script>
+        // Create Day options (1-31)
+        let daySelect = document.getElementById("day");
+        for (let day = 1; day <= 31; day++) {
+            let option = document.createElement("option");
+            option.value = day;
+            option.textContent = day < 10 ? "0" + day : day; // Adding leading zero for single digits
+            daySelect.appendChild(option);
+        }
+
+        // Create Month options (January to December)
+        let monthSelect = document.getElementById("month");
+        const months = [
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
+        ];
+        for (let i = 0; i < months.length; i++) {
+            let option = document.createElement("option");
+            option.value = i + 1;  // Month numbers from 1 to 12
+            option.textContent = months[i];
+            monthSelect.appendChild(option);
+        }
+
+        // Create Year options (for example from 2020 to 2030)
+        let yearSelect = document.getElementById("year");
+        for (let year = 2020; year <= 2030; year++) {
+            let option = document.createElement("option");
+            option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+    </script>
+</body>
+</html>

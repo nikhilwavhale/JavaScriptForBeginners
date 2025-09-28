@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Function</title>
+</head>
+<body>
+    <script>
+        // concat  :- it is used to merge two array in form of one array 
+        /* var arr1=["one","two","three"]
+         var arr2=["four","five","six"]
+         var arr3=["seven"]
+
+         var res=arr3.concat(arr1,arr2)
+         document.write(res+"<br >") */
+
+
+        // unshift :- adds new value to the beginnign of an array and return the new length 
+
+        //  var arr1=["one","two","three"];
+        //  var res=arr1.unshift("new value1", "new value2")
+        //  document.write(res+"<br>") // return the new length of array 
+        //  document.write(arr1+"<br><br>")
+
+        // shift :- removes the first value from an array and return the removed element 
+
+        // var arr1=["one","two","three"];
+        // var res=arr1.shift()
+        // document.write(res+"<br>") // return the removed element 
+        // document.write(arr1+"<br><br>"); 
+        
+        // Push :- adds new values to the ending of the  array and returns the new length 
+
+        
+        // var arr1=["one","two","three"];
+        // var res=arr1.push("new value1", "new value2")
+        // document.write(res+"<br>")  // return the new length of array 
+        // document.write(arr1+"<br><br>")
+
+        // POP :- REMOVES THE LAST VALUE FROM AN ARRAY AND RETURN THE REMOVED ELEMENT 
+
+        
+        // var arr1=["one","two","three"];
+        // var res=arr1.pop()
+        // document.write(res+"<br>")// REMOVED VALUE 
+        // document.write(arr1+"<br><br>")  // return unremoved element 
+
+        // splice :- adds and/of removes array values form the specific index
+
+        // var arr1=["one","two","three","four"];
+        // arr1.splice(1,2,"new1","new2"+"<br>")  // remove one and two and and new value that loc 
+        // arr1.splice(1,0,"new1","new2")  // 
+        // arr1.splice(1,2) // remove value 
+        // document.write(arr1+"<br><br>")
+
+        // toString :- convert array to string 
+        // var arr1=["one","two","three","four",1020];
+        // document.write(typeof arr1+"<br>")
+        // var res=arr1.toString();
+        // document.write(res+"<br>")
+        // var len=res.length
+        // document.write(len+"<br>")
+        // document.write(res[0]+"<br>") // print the first char  from array 0 index value  
+        // document.write(typeof res+"<br>")
+
+        // Join :- return an array as a string . here we can set a seperator as own of user need 
+        // var arr1=["one","two","three","four"]
+        // var str=arr1.join("&") // seperator  &
+        // document.write(str+"<br><br>")           
+        // document.write(typeof str+"<br><br>")
+
+        // reverse :- sort the array in reverse or sort descending order 
+        // var arr1=["one","two ","three"];
+        // var reve=arr1.reverse()
+        // // document.write(arr1)    
+        // document.write(reve+"<br><br>")
+
+        // //sort :- sort the array in ascending order 
+        // var arr1=["a","c","b","d"];
+        // arr1.sort()
+        // document.write(arr1+"<br><br>")
+       
+
+
+        // is array or not :-  Array.isArray()
+        // var arr="string"
+        // var arr1=[1,"nirali"]
+        // document.write(Array.isArray(arr1)+"<br>")
+
+        // foreach 
+
+        // var arr=["python","java","php"]
+        // function test (v,i)  // v for value number  and i = index value mean python is a value  
+        // {
+        //     document.write(i+":"+v+"<br>")
+        // }
+        // arr.forEach(test)
+
+
+        // some :- check the conditon and return the true or false
+
+        // var arr=[2,10,30,60,90]
+        // function test(val)
+        // {
+        //     return val>30
+        // }
+        // document.write(arr.some(test))
+
+        // // find index : - it find the value of index it mean 2 gives 0 index valeu and other 1,2,3 etc...
+        // var arr=[2,10,6,9]
+        // function test(val)
+        // {
+        //     return val>6  // val --> 10 index value 1  ,  6--> index value 2 
+        // }
+        // document.write(arr.findIndex(test))
+
+        // find : it fint tha array value 
+        // var arr=[2,10,6,9]
+        // function test(val)
+        // {
+        //     return val>6   // find return the actual value that index value can hold 
+        // }
+        // document.write(arr.find(test))
+
+
+
+        // filter : all the array is satisfind the condition  and return all the array value 
+        // var arr=[8,10,9,9,7]
+        // function test(val)
+        // {
+        //     return val>8 // filter return the greater value of actual value defined in condition 
+        // }
+        // document.write(arr.filter(test))
+    </script>
+</body>
+</html>

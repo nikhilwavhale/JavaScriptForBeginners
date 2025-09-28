@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+</head>
+<body>
+    <button onclick="stopdisplaytime()">Stop</button>
+    <p id="para"></p>
+    <script>
+        function displayTime()
+        {
+            var d=new Date()
+            var dis_time=d.toLocaleTimeString()
+            document.getElementById("para").innerHTML=dis_time
+        }
+        var x=setInterval(displayTime,1000)
+        function stopdisplaytime()
+        {
+            clearInterval(x)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oninput-event</title>
+</head>
+<body>
+
+    <input type="text" id="uname" oninput="sample()">   
+    <p id="para"></p>
+    <script>
+        // - oninput event occurs when an element get input 
+        // --oninput event occurs when the value of an <input> or <textarea>
+            // element is changed
+            function sample()
+            {
+                 var val=document.getElementById("uname").value  // value.length : is used to check the length of string
+                document.getElementById("para").innerHTML=val
+            }
+
+    </script>   
+</body>
+</html>

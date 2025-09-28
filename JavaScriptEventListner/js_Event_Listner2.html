@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .div1
+        {
+            width: 30%;
+            margin: 20% 35%;
+            border: 2px solid navy;
+            border-radius: 5px;
+            padding: 20px 0px;
+            background-color: antiquewhite;
+        }
+        .para1
+        {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            color: whitesmoke;
+            font-weight: bold;
+            background-color: navy;
+
+        }
+    </style>
+<body>
+    <div id="div1" class="div1">
+        <p id="para1" class="para1">Paragraph !</p>    
+    </div>
+
+    <script>
+        function sample1()
+        {
+            alert("you clicked on paragraph")
+        }
+        function sample2()
+        {
+            alert("you clicked on div")
+        }
+
+        // bubling 
+        document.getElementById("para1").addEventListener("click", sample1)
+        document.getElementById("div1").addEventListener("click", sample2)
+
+        // capturing 
+        // document.getElementById("para1").addEventListener("click", sample1,true)
+        // document.getElementById("div1").addEventListener("click", sample2,true)
+    </script>
+</body>
+</html>

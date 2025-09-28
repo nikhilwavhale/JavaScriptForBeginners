@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="country" onchange="india()">
+        <option value="0">selet country</option>
+        <option value="1">India</option>
+        <option value="2">USA</option>
+        <option value="3">CHINA</option>
+    </select>
+    <img src="" alt="" id="img1" >
+    <!-- <img src="" alt=""> -->
+     <!-- <p id="para"></p> -->
+</body>
+<script>
+    function india()
+    {
+       var val=document.getElementById("country").value
+    
+
+    if(val==1)
+    {
+        document.getElementById("img1").src="../IMAGES/india_flag.jpg"
+
+    }
+    else if(val==2)
+    {
+        document.getElementById("img1").src="../IMAGES/usa_flag.png"
+    }
+    else if(val==3)
+    {
+        document.getElementById("img1").src="../IMAGES/china_flag.png"
+    }
+}
+</script>
+</html>

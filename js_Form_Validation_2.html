@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>select File :</td>
+                <td><input type="file" id="file" onchange="filevalidation()"></td>
+                <td><span id="msg6"></span></td>
+                
+            </tr>
+        </table>
+    </form>
+    <script>
+         function filevalidation()
+        {
+            var filename=document.getElementById("file").value
+            alert(filename)
+            var ext=filename.lastIndexOf(".")
+            alert(ext)
+            var final_ext=filename.substring(ext)
+            alert(final_ext)
+
+            if(final_ext==".jpg" || final_ext==".jpeg" || final_ext==".gif" || final_ext==".png")
+
+            {
+                document.getElementById("msg6").innerHTML
+                document.getElementById("btn").disabled=false
+            }
+            else
+            {
+                document.getElementById("msg6").innerHTML="plese select only jpg,jpeg,png and gif"
+                document.getElementById("msg6").style.color="red"
+                document.getElementById("btn").disabled=true
+            }
+        }
+    </script>
+</body>
+</html>

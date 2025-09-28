@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper{
+            width: 20%;
+            padding: 40px;
+            margin: 20% 30%;
+            background-color: aquamarine;
+            border: 5px solid gray;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px;
+            float: left;
+        }
+        .textbox{
+            width: 13%;
+            border: 0px;
+            border-radius: 5px;
+            padding: 15px;
+            /* outline: none; */
+        }
+        
+        
+        .para{
+            width: 40%;
+            padding: 20px;
+            border:1px;
+            background-color: white;
+            word-wrap: break-word;
+        }
+        .check{
+            width: 50%;
+            float: right;
+            box-sizing: border-box;
+        }
+        .btn{
+            width: 100%;
+            font-size: 15px;
+            margin-top: 5px;
+            padding: 5px;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+            float: left;
+        }
+        .btn:hover{
+            color: black;
+            background-color: green;
+        }
+        .left{
+            width: 50%;
+            box-sizing: border-box;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left">
+    <input class="textbox" type="text" id="txt1">
+    <input class="textbox" type="text" id="txt2">
+    <p class="para" id="para"></p>
+        </div>
+    <div class="check">
+    <button class="btn" onclick="additon()">+</button>
+    <button class="btn" onclick="sub()">-</button>
+    <button class="btn" onclick="multi()">*</button>
+    <button class="btn" onclick="division()">/</button>
+    </div>
+    <!-- <button onclick=""></button> -->
+ 
+    </div>
+    <script>
+        function additon()
+        {
+            var val1=document.getElementById("txt1").value
+            var val2=document.getElementById("txt2").value
+            var res_add=parseFloat (val1) + parseFloat (val2)
+            document.getElementById("para").innerHTML=res_add
+        }
+
+        function sub()
+        {
+            var val1=document.getElementById("txt1").value
+            var val2=document.getElementById("txt2").value
+            var res_sub=parseFloat (val1) - parseFloat (val2)
+            document.getElementById("para").innerHTML=res_sub
+        }
+
+        function multi()
+        {
+            var val1=document.getElementById("txt1").value
+            var val2=document.getElementById("txt2").value
+            var res_multi=parseFloat (val1) * parseFloat (val2)
+            document.getElementById("para").innerHTML=res_multi
+        }
+
+        function division()
+        {
+            var val1=document.getElementById("txt1").value
+            var val2=document.getElementById("txt2").value
+            var res_div=parseFloat (val1) / parseFloat (val2)
+            document.getElementById("para").innerHTML=res_div
+        }
+    </script>
+</body>
+</html>

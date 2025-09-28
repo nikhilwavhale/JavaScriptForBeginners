@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange-in-js</title>
+</head>
+<body>
+    <select name="" id="country" onchange="sample()">
+        <option value="">select country</option>
+        <option value="0">UAE</option>
+        <option value="1">USA</option>
+        <option value="2">DUBAI</option>
+        <option value="3">SOUTH AMERICA</option>
+    </select>
+    <P id="para"></P>
+    <script>
+        // onchane event occurs when the value of an HTML elementis changed 
+        // onchange event is similar to oninput event . but the difference is  that the oniput event occurs imediately 
+        // after the value of an element has changed  
+        // while the onchange occurs when the element lose focus , after the content has been 
+        // changed . we use onchange event when we have multiple option and among those option 
+        // we choose one 
+
+        function sample()
+        {
+            var val=document.getElementById("country").value
+            document.getElementById("para").innerHTML=val
+        }
+
+    </script>
+</body>
+</html>

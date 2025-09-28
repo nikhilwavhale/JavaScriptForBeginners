@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-get_value</title>
+</head>
+<body>
+    <input type="text"  id="txt" placeholder="enter name"> 
+    <button onclick="getValueFromUser()" >get value</button>
+    <p id="para"></p>
+    <script>
+        function getValueFromUser()
+        {
+            var val=document.getElementById("txt").value
+            document.getElementById("para").innerHTML=val
+        }
+    </script>
+</body>
+</html>

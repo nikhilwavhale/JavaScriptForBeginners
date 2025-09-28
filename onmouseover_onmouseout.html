@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-onmouseover and onmounseout</title>
+</head>
+<body>
+    <img src="../IMAGES/bedroomdecor.jpg" id="img" width="40%" height="300px" onmouseover="sample()" onmouseout="sample1()">
+    <!-- <img src="../IMAGES/coffiebeimg.jpg" alt=""> -->
+    <script>
+        function sample()
+        {
+            document.getElementById("img").src="C:/12Nov_IT_View/IMAGES/fleur-di-lis.png"
+        }
+
+        function sample1()
+        {
+            document.getElementById("img").src="../IMAGES/bedroomdecor.jpg"
+        }
+    </script>
+</body>
+</html>

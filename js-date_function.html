@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-date_function</title>
+</head>
+<body>
+    <script>
+        var d=new Date()
+        // document.write(typeof d)
+        // document.write(d+"<br>")
+
+        // getDate :- return only date in an integer 
+        // var dis_date=d.getDate()
+        // document.write(dis_date+"<br>")
+
+        // var dis_month=d.getMonth()
+        // document.write(dis_month+"<br>")  // month is printed in index and index also start with 0 seem it return jan as 0 index
+
+
+          var month_names= [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", ]
+
+        // document.write(month_names[1]+"<br>")
+        document.write(month_names[d.getMonth()]+"<br>")
+
+        // var dis_year=d.getFullYear()
+        // document.write(dis_year+"<br>")
+
+        // var dis_cur_date=d.toLocaleDateString()
+        // document.write(dis_cur_date+"<br>")
+
+        // var dis_cur_time=d.toLocaleTimeString()
+        // document.write(dis_cur_time+"<br>")
+
+        var cur_date=d.getFullYear()+":"+getMonth()+":"+getDate()
+        document.write(cur_date)
+
+        // var dis_hr=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()
+        // document.write(dis_hr+"<br>")
+
+        
+
+
+        
+    </script>
+</body>
+</html>

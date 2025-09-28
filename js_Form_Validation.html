@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_validation</title>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return formValidation()">
+        <table align="center">
+            <tr>
+                <td>UserName:</td>
+                <td><input type="text" id="uname"></td>
+                <td><span id="msg1"></span></td>
+            </tr>
+            <tr>
+                <td>EnterPassword:</td>
+                <td><input type="password" id="pass"></td>
+                <td><span id="msg2"></span></td>
+            </tr>
+            <tr>
+                <td>conformpassword:</td>
+                <td><input type="password" id="cpass"></td>
+                <td><span id="msg3"></span></td>
+
+            </tr>
+            <tr>
+                <td>select country:</td>
+                <td><select name="" id="country">
+                    <option value="0">select country</option>
+                    <option value="1">india</option>
+                    <option value="2">pakistan</option>
+                </select></td>
+                <td><span id="msg4"></span></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gen1" id="gen1">Male
+                    <input type="radio" name="gen2" id="gen2">Female</td>
+                    <td><span id="msg5"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+            <tr>
+                <td>File:</td>
+                <td><input type="file" id="file" onchange="filevalidation()"></td>
+                <td><span id="msg6"></span></td>
+            </tr>
+        </table>
+
+    </form>
+    <script>
+        function formValidation()
+        {
+            var vuname=document.getElementById("uname").value
+            var vpass=document.getElementById("pass").value
+            var cpass=document.getElementById("cpass").value
+            var vcountry=document.getElementById("country").value
+            var vgen1=document.getElementById("gen1")
+            var vgen2=document.getElementById("gen2")
+        if(vuname=='')      
+            {
+                document.getElementById("msg1").innerHTML="please enter your name"
+                document.getElementById("uname").style.borderColor="red"
+
+                return false
+            }
+        if(vpass=='')
+            {
+                document.getElementById("msg2").innerHTML="please enter the password"
+                document.getElementById("msg2").style.color="red"
+                return false
+            }
+        if(vpass.length<4 || vpass.length>8)
+            {
+                document.getElementById("msg2").innerHTML="please enter the password between 4 to 8 character"
+                document.getElementById("msg2").style.color="red"
+                
+                return false
+            }
+        if(vpass != cpass )
+            {
+                document.getElementById("msg3").innerHTML="please enter passwors same as above password"
+                document.getElementById("msg3").style.color="red"
+                return false
+            }
+        if(vcountry == "0")
+            {
+                document.getElementById("msg4").innerHTML="please select country"
+                document.getElementById("msg4").style.color="red"
+                return false
+            }
+        if((vgen1.checked==false) && (vgen2.checked==false))
+            {
+                document.getElementById("msg5").innerHTML="select gender"
+                document.getElementById("msg5").style.color="red"
+                return false  
+            }
+
+        function filevalidation()
+        {
+            var filename=document.getElementById("file").value
+            alert(filename)
+            var ext=filename.lastIndexOf(".")
+            alert(ext)
+            var final_ext=filename.substring(ext)
+            alert(final_ext)
+
+            if(final_ext==".jpg" || final_ext==".jpeg" || final_ext==".gif" || final_ext==".png")
+                {
+                    document.getElementById("msg6").innerHTML
+                    document.getElementById("btn").disabled=false
+                }
+            else
+                {
+                    document.getElementById("msg6").innerHTML="plese select only jpg,jpeg,png and gif"
+                    document.getElementById("msg6").style.color="red"
+                    document.getElementById("btn").disabled=true
+                }
+        }
+
+        }
+    </script>
+</body>
+</html>

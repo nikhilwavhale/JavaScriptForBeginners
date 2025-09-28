@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_dd_mm_yyyyy</title>
+    <style>
+        body p{
+            margin: 0px;
+            padding: 0px;
+        }
+        body
+        {
+            background: radial-gradient(circle,whitesmoke , navy);
+        }
+        .div1
+        {
+            width: 40%;
+            padding: 10px;
+            margin: 20% 25%;
+            border: 1px solid black;
+            background: radial-gradient(navy,navy);
+            border-radius: 5px;
+            box-shadow: 7px 5px 20px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .select1
+        {
+            width: 9%;
+            padding: 5px;
+        }
+        .select2{
+            width: 20%;
+            margin-left: 5px;
+            padding: 5px;
+        }
+        .year{
+            width: 20%;
+            padding: 5px;
+        }
+       
+        .submit{
+            width: 19%;
+            color: navy;
+            font-weight: 800;
+            margin-top: 25px;
+            margin-bottom: 30px;
+            padding: 8px;
+            font-size: 15px;
+            margin-left: 40%   ;
+            box-shadow: 5px 5px 20px black;
+            background-color: yellow;
+            border: 0px;
+            border-radius: 5px;
+        }
+        .submit:hover{
+            
+            color: rgb(30, 30, 20);
+            box-shadow: 5px 5px 10px black;
+            background-color:rgb(0, 255, 17);
+            font-weight: 800  ;
+
+        }
+        .strong{
+            width: 51%;
+            color: whitesmoke;
+            font-size: 20px;
+            margin-left: 5px;
+            font-weight: 600;
+        }
+        .main{
+            width: 100%;
+            margin-top: 20px;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            float: left;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="main">
+       <strong class="strong" >Date:</strong> 
+       <select name="" id="date" class="select1">
+          
+        </select>
+        <strong class="strong" > Month:</strong>
+         <select name="" id="month" class="select2">
+
+        </select>
+        <strong class="strong" >Year:</strong>
+        <select name="" id="year" class="year">
+            
+
+        </select>
+        </div>
+        <div class="btn">
+        <input type="button" value="Submit" class="submit">
+        </div>
+    </div>
+    <script>
+        for(var d=1;d<=31;d++)
+    {
+        document.getElementById("date").innerHTML+="<option>"+d+"</option>"
+    }
+    for(var m=1;m<=12;m++)
+    {
+        document.getElementById("month").innerHTML+="<option>"+m+"</option>"
+    
+    }
+    for(var y=1980;y<=2025;y++)
+    {
+        document.getElementById("year").innerHTML+="<option>"+y+"</option>"
+    }
+    </script>
+</body>
+</html>

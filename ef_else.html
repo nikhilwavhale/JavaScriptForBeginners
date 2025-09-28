@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_else</title>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+        // var name="Peter"
+        // if(name=="John")
+        // {
+        //     document.write("Welcome John")
+        // }
+
+        var name="Peter"
+        if(name=="John")
+        {
+            document.getElementById("para").innerHTML="Welcome John"
+        }
+        else
+        {
+            document.getElementById("para").innerHTML="Welcome Guest"
+        }
+
+        var a=10
+        var b=5 
+
+        if(a>b)
+        {
+            document.write("a is greater"+"<br>")
+        }
+        else 
+        {
+            document.write("b is greater"+"<br>")
+        }
+
+
+        // if given year is leap year then need to print message that given year is leap year 
+
+
+        var year=2024
+        var rem=year%4
+        if(year%4==0)
+        {
+            document.write("the year is leap year"+"<br>")
+        }
+        else
+        {
+            document.write("this year is not leap year"+"<br>")
+        }
+
+        var num=10
+        var rem1=num>0
+        if(num>0)
+        {
+            document.write("this num is positive"+"<br>")
+        }
+        else{
+            document.write("the num is negative"+"<br>")
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>

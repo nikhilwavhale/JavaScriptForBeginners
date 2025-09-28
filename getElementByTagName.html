@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getUsingClass()">click</button>
+    <p class="test">paragraph 1</p>
+    <p class="test">paragraph 2</p>
+    <p class="test">paragraph 3</p>
+    <p class="test">paragraph 4</p>
+    <p class="sample">paragraph 5</p>
+    <h3 class="sample">Heading text 3</h3>
+
+    <script>
+        function getUsingClass()
+        {
+            var para_tag=document.getElementsByClassName("test")
+            // alert(para_tag)
+            // alert(para_tag[0])
+            alert(para_tag[1].innerHTML)
+            // alert(para_tag[3])
+
+
+        }
+    </script>
+</body>
+</html>

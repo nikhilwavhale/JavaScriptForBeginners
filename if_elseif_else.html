@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_else_if</title>
+</head>
+<body>
+    <script>
+        var color="blue"
+        if (color=="blue")
+    {
+        document.write("color is blue"+"<br>")
+    }
+    else if(color=="Red")
+    {
+        document.write("color is red"+"<br>")
+    }
+    else{
+        document.write("color is not existed")
+    }
+
+    var a=9
+    var b=7
+    var c=8
+    if((a>b) && (a>c))
+    {
+        document.write("A is greater number"+"<br>")
+    }
+    else if ((b>a) && (b>c))
+    {
+        document.write("B is greate number"+"<br>")
+    }
+    else if((c>a) && (c>b))
+    {
+        document.write("C is greater number")
+    }
+    else {
+        document.write("the num is not existed ")
+
+    }
+
+
+    // marks = 56
+    // if marks is between 75 to 100 than should give the message Distinction
+    // if marks is between 60 to 75 than should give the message First class
+    // if marks is between 45 to 60 than should give the message Second class
+    // if marks is between 35 to 45 than should give the message Pass
+    // if marks is less than 35  than should give the message fail
+
+    var marks=56
+    if(marks>=75)
+    {
+        document.write("distinction")
+    }
+    else if ((marks>=60) && (marks<75))
+    {
+        document.write("First class")
+    }
+    else if ((marks>=45) && (marks<60))
+    {
+        document.write("second class"+"<br><br>")
+    }
+    else if((marks>=35) && (marks<45))
+    {
+        document.write("pass")
+    }
+    else if ((marks>=0) && (marks<35))
+    {
+        document.write("fail"+"<br>")
+    }
+
+//     Assignment 1:
+// create a variable  to store the user's age.
+// check if user's age is less than 18 then display a message that "not eligible for voting. and also calculate the difference after how many years user can do vote"
+// check if user's age is greater than 18 then display a message that "You are eligible for voting."
+    var age=20
+    if(age>=18)
+    {
+        document.write("Congreatulation!"+"<br>")
+        document.write("You are elligible to vote apply for voting card "+"<br>")
+    }
+    else
+    {
+        document.write("Sorry ! You are not valid for vote "+"<br><br>")
+        document.write("Try after"+"&nbsp"+(18-age)+"&nbsp"+"years")
+    }
+
+    </script>
+</body> 
+</html>

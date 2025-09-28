@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus</title>
+</head>
+<body>
+    <input type="text" name="" id="focus" onfocus="sample()" onblur="sample1()">
+    <p id="para"></p>
+    <script>
+        function sample()
+        {
+            document.getElementById("focus").style.border="1px solid red"
+            document.getElementById("focus").style.outline="none"
+        }
+
+        function sample1()
+        {
+            document.getElementById("focus").style.border="2px solid black"
+        }
+    </script>
+</body>
+</html>

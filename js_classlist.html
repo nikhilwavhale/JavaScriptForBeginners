@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-classlist</title>
+    <style>
+        .sample
+        {
+            color: red;
+        }
+        .demo
+        {
+            font-size: 50px;
+        }
+        .test
+        {
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="classlist()">click</button>
+    <h1 id="head">This is heading</h1>
+    <p id="para" class="test">this is paragraph</p> 
+    <span id="span1" class="test">span</span>
+
+    <script>
+        function classlist()
+        {
+            document.getElementById("head").classList.add("sample")
+            document.getElementById("head").classList.add("test")
+
+            document.getElementById("para").classList.remove("test")
+            document.getElementById("span1").classList.toggle("sample")  // if class is there the toggle is remove the class and and  
+            document.getElementById("span1").classList.toggle("test")   // if class is not there the toggle is add the class value to the attriute
+
+
+        }
+    </script>
+</body>
+</html>

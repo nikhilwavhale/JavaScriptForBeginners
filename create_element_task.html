@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sample()">click</button>
+    <div id="div1"></div>
+
+    <script>
+        function sample()
+        {
+            var div_tag=document.getElementById("div1")
+
+
+            var p_tag=document.createElement("p")
+            div_tag.prepend(p_tag)
+            p_tag.innerHTML="I'm Paragraph tag"
+
+            var span_tag=document.createElement("span")
+            p_tag.after(span_tag)
+            span_tag.innerHTML="I'm span tag"
+
+            var head_tag=document.createElement("h3")
+            span_tag.after(head_tag)
+            head_tag.innerHTML="I'm Heading tag h3 "
+
+        }
+    </script>
+</body>
+</html>

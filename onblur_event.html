@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-onblur-event</title>
+</head>
+<body>
+    <input type="text" name="" id="uname" onblur="onblur()">
+    <p id="para"></p>
+    <script>
+        // onblur event occur when a user leaves an html element . when an html element or when an html element loose focus 
+        // onblur event is often used with inpuut field
+        // onblur generally we use for form validation
+
+        function onblur()
+        {
+            var val=document.getElementById("uname").value
+            document.getElementById("para").innerHTML=val
+        }
+        
+
+    </script>
+</body>
+</html>
